@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context path="/FUNDAMENTOS-JASAP" useHttpOnly="false">
+    
+  <ResourceLink 
+    auth="Container" 
+    factory="br.jasap.dbl.db.pool.DblDBFactory" 
+    global="JasapDB" name="JasapDBLocal" 
+    type="br.jasap.dbl.dao.DblGlobalDataBase"
+  />
+  
+  <ResourceLink 
+    auth="Container" 
+    global="jdbc/xtdb" 
+    name="jdbc/xtdb" 
+    type="javax.sql.DataSource"
+  />
+  
+</Context>

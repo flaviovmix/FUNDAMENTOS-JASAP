@@ -7,6 +7,7 @@ public class RootManager extends JasapRootManager {
     @Override
     public void config() throws Exception {
         regAction(HomeAction.Hello.class, "home.jsap");
+        regAction(HomeAction.sobre.class);
     }
     
     @Override

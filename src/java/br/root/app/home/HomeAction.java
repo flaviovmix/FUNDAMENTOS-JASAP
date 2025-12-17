@@ -19,30 +19,46 @@ public abstract class HomeAction extends JasapAct {
             Page pagina = new Page();
             
             StringBuilder aux = new StringBuilder();
-            aux.append("OLÁ MUNDO!");
-            aux.append("<br>");
-            aux.append("<a href=\"" + link(sobre.class).getURL() + "\" >sobre | </a>");
-            aux.append("<a href=\"index.html\" >voltar pra home</a>");
             
-            System.out.println("mensagem no console");
-            getInput().printParameters();
+            aux.append("<main>\n");
+                aux.append("<div class=\"menu\">\n");
+
+                    aux.append("<div>\n");
+
+                        aux.append("<a href=\""+ link(metodo.class).getURL() +"\">link</a>\n");
+                        aux.append("<a href=\""+ link(metodo.class).getURL() +"\">eval</a>\n");
+                        aux.append("<a href=\""+ link(metodo.class).getURL() +"\">submit</a>\n");
+                        aux.append("<a href=\""+ link(metodo.class).getURL() +"\">update</a>\n");
+                    aux.append("</div>\n");
+
+                    aux.append("<div>\n");
+                        aux.append("<input type=\"text\" placeholder=\"Input 1\">\n");
+                        aux.append("<input type=\"text\" placeholder=\"Input 2\">\n");
+                        aux.append("<a href=\"#\">submit</a>\n");
+                    aux.append("</div>\n");
+
+                aux.append("</div>\n");
+            
+                aux.append("<div class=\"fundo-azul\">\n");
+                    aux.append("<span id=\"area-azul\"></span>\n");
+                aux.append("</div>\n");
+                aux.append("<div class=\"fundo-verde\">\n");
+                    aux.append("<span id=\"cronometro\">00:00</span>\n");
+                aux.append("</div>\n");
+            
+            aux.append("</main>\n");
+            aux.append("<script src=\"assets/cronometro.js\"></script>\n");
+
+            
             getOutput().write( pagina.toHtml(aux.toString()));
             return new Response();
         }
     }
     
-    public static class sobre extends HomeAction {
+    public static class metodo extends HomeAction {
         @Override
         public Effect execute() throws Exception {
             
-            StringBuilder aux = new StringBuilder();
-            aux.append("pagina sobre!");
-            aux.append("<br>");
-            aux.append("<a href=\"index.html\" >voltar pra home | </a>");
-            aux.append("<a href=\"" + link(Hello.class).getURL() + "\" >voltar</a>");
-            
-            System.out.println("passou na pagina sobre");
-            getOutput().write(aux.toString());
             return new Response();
         }
     }

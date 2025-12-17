@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#cronometro {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* =========================
+   GRID BASE (MOBILE FIRST)
+========================= */
+main {
+    display: grid;
+    min-height: 100vh;
+    min-width: 500px;
+    grid-template-rows: 120px 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 5px;
+}
+
+/* =========================
+   MENU
+========================= */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    padding: 10px 15px;
+    background-color: rgb(249, 234, 216);
+}
+
+.menu a {
+    background-color: rgb(231, 167, 167);
+    padding: 12px 14px 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    font-size: .85rem;
+    white-space: nowrap;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu input {
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: .85rem;
+}
+
+/* =========================
+   FUNDO AZUL / VERDE
+========================= */
+.fundo-azul,
+.fundo-verde {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fundo-azul {
+    background-color: rgb(207, 244, 246);
+}
+
+.fundo-verde {
+    background-color: rgb(170, 240, 143);
+}
+
+/* =========================
+   DESKTOP (>= 755px)
+   Azul à esquerda / Verde à direita
+========================= */
+@media (min-width: 755px) {
+    main {
+        grid-template-rows: 120px 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu {
+        grid-column: 1 / -1;
+        align-items: center;
+    }
+}

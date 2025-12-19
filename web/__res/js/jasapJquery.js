@@ -71,7 +71,7 @@ function parseInput(){
         if(debugCall)alert(inputData);
         return JSON.parse(inputData);
     } catch (err) {
-        alert('Erro na leitï¿½ra do formulï¿½rio, informe ao suporte do sistema.\n'+err);
+        alert('Erro na leitúra do formulário, informe ao suporte do sistema.\n'+err);
         return null;
     }
 }
@@ -128,6 +128,7 @@ function ajaxURL2(url, ji, protectURL, lck){
                     if(lck==1)$Id('ld-xt').hide();
                 } 
                 if(debugCall)alert('Finalizada chamada ajax!');
+                refreshView();
             },
 						
             success: function( strData ){
@@ -176,7 +177,7 @@ function ajaxURL2(url, ji, protectURL, lck){
         );         
         
     } else if (activeIdx>=0){
-        //if(lck==1)alert("A requisiï¿½ï¿½o jï¿½ estï¿½ em andamento, aguarde!");
+        //if(lck==1)alert("A requisição já está em andamento, aguarde!");
     }
 }
 
@@ -203,11 +204,12 @@ function takeAction(json, idx){
                     $Id(json.id).html(json.html);
                     if (st>0)$Id(json.id).scrollTop(st);
                 }
-                //else alert('Referï¿½ncia de objeto nï¿½o encontrada ID :'+json.id+', comunique o suporte do sistema.');
+                //else alert('Referência de objeto não encontrada ID :'+json.id+', comunique o suporte do sistema.');
             } catch(err) {
                 alert('Ajax update error, informe ao suporte do sistema. ERROR: '+err+" - ID : "+json.id);
                 activeAjax.remove(idx);
             }
+            refreshView();
         }   
     }
 }
@@ -275,4 +277,3 @@ function submitUpload(frm, url, progressURL, validate){
 }
 
 jasapPage = {};
-function refreshView(){}

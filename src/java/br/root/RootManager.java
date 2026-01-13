@@ -1,12 +1,12 @@
 package br.root;
 
 import br.jasap.core.JasapRootManager;
-import br.root.home.PaginaPrincipal;
+import br.root.home.Dashboard;
 public class RootManager extends JasapRootManager {
     
     @Override
     public void config() throws Exception {
-        regAction(PaginaPrincipal.OlaMundo.class, "home.jsap");
+        regAction(Dashboard.Interface.class, "home.jsap");
     }
     
     @Override

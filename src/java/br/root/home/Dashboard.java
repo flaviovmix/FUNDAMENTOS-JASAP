@@ -4,18 +4,19 @@ import br.jasap.core.Effect;
 import br.jasap.core.JasapAct;
 import br.jasap.effect.Response;
 import br.root.Page;
+import br.root.dashboard.layout.Layout;
 
-public abstract class PaginaPrincipal extends JasapAct {
+public abstract class Dashboard extends JasapAct {
 
-    public PaginaPrincipal() {
-        
+    public Dashboard() {
     }
     
-    public static class OlaMundo extends PaginaPrincipal {
+    public static class Interface extends Dashboard {
         @Override
         public Effect execute() throws Exception {
+            Layout layout = new Layout();
             Page pagina = new Page();
-            getOutput().write( pagina.toHtml("Olá Mundo"));
+            getOutput().write( pagina.toHtml(layout.toHtml()));
             return new Response();
         }   
     }

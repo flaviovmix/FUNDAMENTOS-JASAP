@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+    <servlet>
+        <servlet-name>JasapController</servlet-name>
+        <servlet-class>br.jasap.core.JasapController</servlet-class>
+        <init-param>
+            <param-name>APPLICATION_MANAGER</param-name>
+            <param-value>br.root.RootManager</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>JasapController</servlet-name>
+        <url-pattern>*.jsap</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+</web-app>

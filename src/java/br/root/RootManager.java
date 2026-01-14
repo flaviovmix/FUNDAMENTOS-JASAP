@@ -2,6 +2,7 @@ package br.root;
 
 import br.jasap.core.JasapRootManager;
 import br.root.home.Dashboard;
+
 public class RootManager extends JasapRootManager {
     
     @Override
@@ -12,7 +13,7 @@ public class RootManager extends JasapRootManager {
     @Override
     public void sessionConfig() {
     }
-
+    
     @Override
     public void configGlobalFilters() throws Exception {
     }

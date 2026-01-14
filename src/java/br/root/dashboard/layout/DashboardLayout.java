@@ -1,6 +1,6 @@
 package br.root.dashboard.layout;
 
-public class Layout {
+public class DashboardLayout {
     
     private final Header header = new Header();
     private final BarraLateral barraLateral = new BarraLateral();

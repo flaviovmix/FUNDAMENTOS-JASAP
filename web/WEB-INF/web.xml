@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <web-app>
+
     <servlet>
         <servlet-name>JasapController</servlet-name>
         <servlet-class>br.jasap.core.JasapController</servlet-class>
@@ -17,7 +18,7 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>start.html</welcome-file>
     </welcome-file-list>
-    
+
 </web-app>

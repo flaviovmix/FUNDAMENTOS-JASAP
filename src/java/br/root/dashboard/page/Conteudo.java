@@ -1,6 +1,6 @@
-package br.root.dashboard.layout;
+package br.root.dashboard.page;
 
-public class Footer {
+public class Conteudo {
     
     public String toHtml() {
         StringBuilder aux = new StringBuilder();

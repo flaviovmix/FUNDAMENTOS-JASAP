@@ -4,9 +4,9 @@ import br.jasap.core.Effect;
 import br.jasap.core.JasapAct;
 import br.jasap.effect.Response;
 import br.root.Interface.Page;
-import br.root.dashboard.layout.CssDashboard;
-import br.root.dashboard.layout.DashboardLayout;
-import br.root.dashboard.layout.JsDashboard;
+import br.root.dashboard.page.CssDashboard;
+import br.root.dashboard.page.DashboardTemplate;
+import br.root.dashboard.page.JsDashboard;
 
 public abstract class Dashboard extends JasapAct {
 
@@ -16,7 +16,7 @@ public abstract class Dashboard extends JasapAct {
     public static class Interface extends Dashboard {
         @Override
         public Effect execute() throws Exception {
-            DashboardLayout dashboard = new DashboardLayout();
+            DashboardTemplate dashboard = new DashboardTemplate();
             Page pagina = new Page();
             pagina.setCss(CssDashboard.toHtml());
             pagina.setJs(JsDashboard.toHtml());

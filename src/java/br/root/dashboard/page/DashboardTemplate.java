@@ -1,6 +1,6 @@
-package br.root.dashboard.layout;
+package br.root.dashboard.page;
 
-public class DashboardLayout {
+public class DashboardTemplate {
     
     private final Header header = new Header();
     private final BarraLateral barraLateral = new BarraLateral();

@@ -1,4 +1,4 @@
-package br.root.dashboard.layout;
+package br.root.dashboard.page;
 
 public class Header {
     public String toHtml() {

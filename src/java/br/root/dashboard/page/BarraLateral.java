@@ -1,4 +1,4 @@
-package br.root.dashboard.layout;
+package br.root.dashboard.page;
 
 public class BarraLateral {
     public String toHtml() {

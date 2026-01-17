@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <web-app>
+    <listener>
+        <listener-class>br.root.AppBootstrap</listener-class>
+    </listener>
 
+    <context-param>
+        <param-name>USE_TIMESTAMP</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>ASSET_VERSION</param-name>
+        <param-value>201601161521</param-value>
+    </context-param>
+ 
+    <welcome-file-list>
+        <welcome-file>start.html</welcome-file>
+    </welcome-file-list>
+
+    <servlet-mapping>
+        <servlet-name>JasapController</servlet-name>
+        <url-pattern>*.jsap</url-pattern>
+    </servlet-mapping>    
+            
     <servlet>
         <servlet-name>JasapController</servlet-name>
         <servlet-class>br.jasap.core.JasapController</servlet-class>
@@ -11,14 +33,5 @@
         </init-param>
         <load-on-startup>0</load-on-startup>
     </servlet>
-
-    <servlet-mapping>
-        <servlet-name>JasapController</servlet-name>
-        <url-pattern>*.jsap</url-pattern>
-    </servlet-mapping>
-
-    <welcome-file-list>
-        <welcome-file>start.html</welcome-file>
-    </welcome-file-list>
 
 </web-app>

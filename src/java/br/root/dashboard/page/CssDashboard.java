@@ -1,18 +1,18 @@
 package br.root.dashboard.page;
 
+import br.root.AppConfig;
+
 public class CssDashboard {
 
     public static String toHtml() {
+        
+        String r = AppConfig.assetVersion();
         StringBuilder aux = new StringBuilder();
-        long r = System.currentTimeMillis();
-        
-            aux.append("<link rel=\"stylesheet\" href=\"./assets/css/index-claro.css?r="+r+"\">\n");
-            aux.append("<link rel=\"stylesheet\" href=\"./assets/css/normalize.css?r="+r+"\">\n");
-            aux.append("<link rel=\"stylesheet\" href=\"./assets/css/sidebar.css?r="+r+"\">\n");    
-            aux.append("<link rel=\"stylesheet\" href=\"./assets/css/dashboard.css?r="+r+"\">\n");
-            aux.append("<link rel=\"stylesheet\" href=\"./assets/css/contatos.css?r="+r+"\">\n");        
-        
+        aux.append("<link rel=\"stylesheet\" href=\"./assets/css/index-claro.css?v="+r+"\">\n");
+        aux.append("<link rel=\"stylesheet\" href=\"./assets/css/normalize.css?v="+r+"\">\n");
+        aux.append("<link rel=\"stylesheet\" href=\"./assets/css/sidebar.css?v="+r+"\">\n");    
+        aux.append("<link rel=\"stylesheet\" href=\"./assets/css/dashboard.css?v="+r+"\">\n");
+        aux.append("<link rel=\"stylesheet\" href=\"./assets/css/contatos.css?v="+r+"\">\n");        
         return aux.toString();
     }
-    
 }

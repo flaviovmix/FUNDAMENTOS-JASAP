@@ -1,10 +1,12 @@
 package br.root.Interface;
 
+import br.root.AppConfig;
+
 public class JsJasap {
     
     public static String toHtml() {
         StringBuilder aux = new StringBuilder();
-        long r = System.currentTimeMillis();
+        String r = AppConfig.assetVersion();
         
         // 1) jQuery
         aux.append("<script src=\"res/vendors/jquery/jquery-3.6.0.min.js\"></script>\n");

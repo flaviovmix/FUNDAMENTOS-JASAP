@@ -22,7 +22,7 @@ public abstract class Dashboard extends JasapAct {
             pagina.setJs(JsDashboard.toHtml());
             getOutput().write(pagina.toHtml(dashboard.toHtml(), "Titulo da Página"));
             return new Response();
-        }   
+        }
     }
     
 }
